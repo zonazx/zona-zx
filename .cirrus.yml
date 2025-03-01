@@ -21,4 +21,4 @@ task:
   resync_test_script:
       - git clone --depth=1 https://github.com/$usernames/bash ~/rom
       - cd ~/rom
-      - bash resync.sh
+      - bash resync_test.sh
