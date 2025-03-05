@@ -19,6 +19,6 @@ task:
        - echo "$credentials" > ~/.git-credentials
 
   resync_test_script:
-      - git clone --depth=1 https://github.com/$usernames/bash ~/rom
-      - cd ~/rom
+      - git clone --depth=1 https://github.com/$usernames/bash ~/rom_zx
+      - cd ~/rom_zx
       - bash resync_test.sh
