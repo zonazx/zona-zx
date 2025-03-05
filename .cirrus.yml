@@ -4,7 +4,7 @@ env:
     useremails: "ENCRYPTED[!047bd9cc5bd11c7d5362caf6f1f5942b24d393a0490c96e39cf6c60052150ded771f9bcef34f103f504d67e9b8a495af!]"
 
 task:
-  name: "resync and build"
+  name: "builder"
   timeout_in: 480m
   container:
       image: inok2341/anu:latest
