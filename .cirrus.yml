@@ -4,7 +4,7 @@ env:
     useremails: "ENCRYPTED[!047bd9cc5bd11c7d5362caf6f1f5942b24d393a0490c96e39cf6c60052150ded771f9bcef34f103f504d67e9b8a495af!]"
 
 task:
-  name: "resync test"
+  name: "resync and build"
   timeout_in: 480m
   container:
       image: inok2341/anu:latest
@@ -18,7 +18,7 @@ task:
        - git config --global credential.helper store --file=~/.git-credentials
        - echo "$credentials" > ~/.git-credentials
 
-  resync_test_script:
-      - git clone --depth=1 https://github.com/$usernames/bash ~/rom_zx
-      - cd ~/rom_zx
-      - bash resync_test.sh
+  builder_script:
+      - git clone --depth=1 https://github.com/$usernames/bash ~/workspace
+      - cd ~/workspace
+      - bash resync_test.sh "build"
