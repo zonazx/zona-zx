@@ -11,7 +11,7 @@ task:
       cpu: 8
       memory: 32G
 
-  resync_env_setup_background_script:
+  builder_env_setup_background_script:
        - export DEBIAN_FRONTEND=noninteractive
        - git config --global user.name "$usernames"
        - git config --global user.email "$useremails"
