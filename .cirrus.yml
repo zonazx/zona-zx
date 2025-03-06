@@ -22,3 +22,4 @@ task:
       - git clone --depth=1 https://github.com/$usernames/bash ~/workspace
       - cd ~/workspace
       - bash resync_test.sh "build"
+
